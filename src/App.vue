@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <FormularioVue @agregarTabla="addUsuarioTabla" />
+    <!-- <TableVue :usuarios="usuarios" /> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FormularioVue from "./components/FormularioVue.vue";
+// import TableVue from "./components/FormularioVue.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    FormularioVue,
+    // TableVue,
+  },
+
+  data() {
+    return {
+
+      usuarios:[]
+
+    };
+  },
+
+
+
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
